@@ -1,0 +1,50 @@
+project_id = "hvpytasddzeprgqkwlbu"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[functions.stripe-webhook-seat]
+verify_jwt = false
+
+[functions.compare-seats]
+verify_jwt = false
+
+[functions.book-seats-admin]
+verify_jwt = false
+
+[functions.approve-refund]
+verify_jwt = false
+
+[functions.chat-support]
+verify_jwt = false
+
+[functions.resend-tickets]
+verify_jwt = false
+
+[functions.create-checkout-session-seat]
+verify_jwt = false
+
+[functions.create-checkout-session-simple]
+verify_jwt = false
+
+[functions.stripe-webhook-simple]
+verify_jwt = false
+
+[functions.create-checkout-session-match]
+verify_jwt = false
+
+[functions.create-checkout-session-festival]
+verify_jwt = false
+
+[functions.upload-match-document]
+verify_jwt = false
+
+[functions.stripe-webhook-match]
+verify_jwt = false
+
+[functions.ocr-document]
+verify_jwt = false

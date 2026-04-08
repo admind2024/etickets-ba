@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- THEME COLOR -->
+    <meta name="theme-color" content="#013DC4" />
+
+    <!-- PRECONNECT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://e-tickets-cache.rade-milosevic87.workers.dev" crossorigin />
+    <link rel="preconnect" href="https://hvpytasddzeprgqkwlbu.supabase.co" crossorigin />
+
+    <!-- DNS PREFETCH -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://e-tickets-cache.rade-milosevic87.workers.dev" />
+
+    <!-- PLUS JAKARTA SANS -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- INTER FONT FOR BODY TEXT -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      as="style"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- OSWALD FONT FOR FSCG TICKET -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+      as="style"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- PRELOAD API -->
+    <link
+      rel="preload"
+      href="https://e-tickets-cache.rade-milosevic87.workers.dev/functions/v1/get-events-i18n?lang=bs"
+      as="fetch"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://e-tickets-cache.rade-milosevic87.workers.dev/functions/v1/get-sponsors"
+      as="fetch"
+      crossorigin="anonymous"
+    />
+
+    <title>etickets.ba | Ulaznice za koncerte i događaje u BiH</title>
+
+    <!-- FAVICONS -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- FEATURED IMAGE PRELOAD -->
+    <script>
+      fetch('https://e-tickets-cache.rade-milosevic87.workers.dev/functions/v1/get-events-i18n?lang=bs')
+        .then(r => r.json())
+        .then(events => {
+          const featured = events.find(e => e.prioritet);
+          if (featured && featured.image) {
+            const imgUrl = featured.image.startsWith('http')
+              ? featured.image.replace('hvpytasddzeprgqkwlbu.supabase.co','e-tickets-cache.rade-milosevic87.workers.dev')
+              : 'https://e-tickets-cache.rade-milosevic87.workers.dev/storage/v1/object/public/slike/' + featured.image;
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = imgUrl;
+            link.fetchPriority = 'high';
+            document.head.appendChild(link);
+          }
+        })
+        .catch(() => {});
+    </script>
+
+    <!-- JSON-LD STRUCTURED DATA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://etickets.ba/#organization",
+            "name": "etickets.ba",
+            "url": "https://etickets.ba",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://etickets.ba/logo.png"
+            },
+            "sameAs": [
+              "https://www.facebook.com/etickets.ba",
+              "https://www.instagram.com/etickets.ba"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+387-33-000-000",
+              "contactType": "Customer Service",
+              "areaServed": "BA",
+              "availableLanguage": ["bs", "en"]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://etickets.ba/#website",
+            "url": "https://etickets.ba",
+            "name": "etickets.ba",
+            "description": "Regionalna platforma za online kupovinu ulaznica",
+            "publisher": {
+              "@id": "https://etickets.ba/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://etickets.ba?search={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]
+      }
+    </script>
+    <meta property="og:title" content="etickets.ba | Ulaznice za koncerte i događaje u BiH">
+  <meta name="twitter:title" content="etickets.ba | Ulaznice za koncerte i događaje u BiH">
+  <meta name="description" content="etickets je regionalna platforma za online prodaju ulaznica za koncerte, festivale, sportske i kulturne događaje u Bosni i Hercegovini.">
+  <meta property="og:description" content="etickets je regionalna platforma za online prodaju ulaznica za koncerte, festivale, sportske i kulturne događaje u Bosni i Hercegovini.">
+  <meta name="twitter:description" content="etickets je regionalna platforma za online prodaju ulaznica za koncerte, festivale, sportske i kulturne događaje u Bosni i Hercegovini.">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:type" content="website">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
