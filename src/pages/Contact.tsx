@@ -95,8 +95,8 @@ const ContactPage = () => {
     }
   > = {
     bs: {
-      seoTitle: "Kontakt | etickets",
-      seoDescription: "Kontaktirajte etickets tim za sva pitanja o kupovini ulaznica. Naš tim je spreman da vam pomogne.",
+      seoTitle: "Kontakt | e-tickets",
+      seoDescription: "Kontaktirajte e-tickets tim za sva pitanja o kupovini ulaznica. Naš tim je spreman da vam pomogne.",
       heroBadge: "Tu smo za vas",
       heroTitle: "Kontaktirajte nas",
       heroSubtitle: "Imate pitanje ili trebate pomoć? Naš tim je spreman da vam pomogne.",
@@ -153,8 +153,8 @@ const ContactPage = () => {
       },
     },
     en: {
-      seoTitle: "Contact | etickets",
-      seoDescription: "Contact etickets team for all questions about ticket purchases. Our team is ready to help you.",
+      seoTitle: "Contact | e-tickets",
+      seoDescription: "Contact e-tickets team for all questions about ticket purchases. Our team is ready to help you.",
       heroBadge: "We're here for you",
       heroTitle: "Contact Us",
       heroSubtitle: "Have a question or need help? Our team is ready to assist you.",
@@ -570,7 +570,7 @@ const ContactPage = () => {
 
                 <div className="space-y-4">
                   <a
-                    href="mailto:support@etickets.ba"
+                    href="mailto:support@e-tickets.me"
                     className="flex items-center gap-3 p-3 rounded-xl bg-card hover:bg-muted transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -578,7 +578,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">{t.emailLabel}</p>
-                      <p className="font-medium text-foreground">support@etickets.ba</p>
+                      <p className="font-medium text-foreground">support@e-tickets.me</p>
                     </div>
                   </a>
 

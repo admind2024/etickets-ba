@@ -54,7 +54,7 @@ export const HeroSection = () => {
         <div className="container py-20 md:py-32 lg:py-40">
           <div className="max-w-2xl">
             <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-card sm:text-5xl md:text-6xl">
-              Dobrodošli na etickets
+              Dobrodošli na e-tickets
             </h1>
             <p className="mb-8 text-lg text-card/80">Pronađite i kupite ulaznice za najbolje događaje u regionu</p>
             <Button asChild variant="hero" size="xl">

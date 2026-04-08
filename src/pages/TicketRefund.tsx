@@ -12,12 +12,12 @@ const RefundPolicy = () => {
 
   const seoContent = {
     bs: {
-      title: "Povrat novca i reklamacije | etickets",
-      description: "Sve o vraćanju ulaznica, refundaciji i osiguranju ulaznica na etickets platformi.",
+      title: "Povrat novca i reklamacije | e-tickets",
+      description: "Sve o vraćanju ulaznica, refundaciji i osiguranju ulaznica na e-tickets platformi.",
     },
     en: {
-      title: "Refunds and Complaints | etickets",
-      description: "Everything about returning tickets, refunds and ticket insurance on etickets platform.",
+      title: "Refunds and Complaints | e-tickets",
+      description: "Everything about returning tickets, refunds and ticket insurance on e-tickets platform.",
     },
   };
 
@@ -79,7 +79,7 @@ const RefundPolicy = () => {
       forceText1:
         "Viša sila, tokom koje miruju obaveze Organizatora, nastupa kada Organizator događaja nije u stanju da ispuni svoju obavezu održavanja događaja zbog rata, pobune, terorističkih akata, štrajkova, nesreća, požara, blokade, poplave, odluke ili akcije epidemiološke vlasti, prirodne katastrofe, teškog poremećaja u snabdevanju energijom ili bilo čega drugog, iz razloga koji je van njegove moći i kontrole.",
       forceText2:
-        "Ako je događaj otkazan ili odložen zbog navedenih okolnosti, Rakunat će o tome obavijestiti kupce što je prije moguće putem veb-sajta www.etickets.ba ili drugim kanalima komunikacije.",
+        "Ako je događaj otkazan ili odložen zbog navedenih okolnosti, Rakunat će o tome obavijestiti kupce što je prije moguće putem veb-sajta www.e-tickets.me ili drugim kanalima komunikacije.",
       refundTitle: "Povraćaj sredstava",
       refundText1:
         "U slučaju povraćaja sredstava kupcu koji je prethodno platio nekom od platnih kartica, djelimično ili u cjelosti, a bez obzira na razlog vraćanja, taj povraćaj se vrši isključivo preko iste VISA, Maestro ili MasterCard kartice koja je korištena za plaćanje. Ovo znači da će naša banka na naš zahtjev obaviti povraćaj sredstava na račun korisnika kartice.",
@@ -166,7 +166,7 @@ const RefundPolicy = () => {
       forceText1:
         "Force majeure, during which the Organizer's obligations are suspended, occurs when the event Organizer is unable to fulfill its obligation to hold the event due to war, rebellion, terrorist acts, strikes, accidents, fire, blockade, flood, decision or action of epidemiological authorities, natural disaster, severe disruption in energy supply, or anything else beyond its power and control.",
       forceText2:
-        "If the event is canceled or postponed due to the above circumstances, Rakunat will notify buyers as soon as possible via the website www.etickets.ba or other communication channels.",
+        "If the event is canceled or postponed due to the above circumstances, Rakunat will notify buyers as soon as possible via the website www.e-tickets.me or other communication channels.",
       refundTitle: "Refund of Funds",
       refundText1:
         "In case of refund to a buyer who previously paid with one of the payment cards, partially or in full, regardless of the reason for the return, this refund is made exclusively through the same VISA, Maestro or MasterCard card that was used for payment. This means that our bank will, at our request, refund the funds to the cardholder's account.",
@@ -279,8 +279,8 @@ const RefundPolicy = () => {
               <p>{t.complaintText1}</p>
               <p>
                 {t.complaintText2}{" "}
-                <a href="mailto:info@etickets.ba" className="text-primary hover:underline">
-                  info@etickets.ba
+                <a href="mailto:support@e-tickets.me" className="text-primary hover:underline">
+                  support@e-tickets.me
                 </a>
               </p>
 
@@ -365,8 +365,8 @@ const RefundPolicy = () => {
                 </p>
                 <p className="text-blue-600 dark:text-blue-400 text-sm">
                   {t.partialRefundNote}{" "}
-                  <a href="mailto:info@etickets.ba" className="underline">
-                    info@etickets.ba
+                  <a href="mailto:support@e-tickets.me" className="underline">
+                    support@e-tickets.me
                   </a>
                   .
                 </p>

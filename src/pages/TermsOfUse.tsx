@@ -10,12 +10,12 @@ const TermsOfService = () => {
 
   const seoContent = {
     bs: {
-      title: "Uslovi korišćenja | etickets.me",
-      description: "Uslovi korišćenja etickets.me platforme za online kupovinu ulaznica. Pročitajte prava i obaveze korisnika.",
+      title: "Uslovi korišćenja | e-tickets.me",
+      description: "Uslovi korišćenja e-tickets.me platforme za online kupovinu ulaznica. Pročitajte prava i obaveze korisnika.",
     },
     en: {
-      title: "Terms of Use | etickets.me",
-      description: "Terms of use for etickets.me online ticket purchasing platform. Read user rights and obligations.",
+      title: "Terms of Use | e-tickets.me",
+      description: "Terms of use for e-tickets.me online ticket purchasing platform. Read user rights and obligations.",
     },
   };
 
@@ -231,7 +231,7 @@ const TermsOfService = () => {
               <h3 className="text-xl font-semibold mt-6 mb-3">4.3. Pravna lica – plaćanje na osnovu predračuna</h3>
               <p>
               Za poručivanje i plaćanje ulaznica putem predračuna za pravno lice, potrebno je na e-mail adresu
-                info@etickets.ba poslati sledeće podatke: naziv firme, adresu, PIB i e-mail adresu na koju naša služba
+                support@e-tickets.me poslati sledeće podatke: naziv firme, adresu, PIB i e-mail adresu na koju naša služba
                 treba da pošalje predračun. Takođe je potrebno da se naglasi za koji događaj se poručuju ulaznice,
                 količinu ulaznica kao i cjenovnu kategoriju ulaznica za koje je potreban predračun.
               </p>
@@ -282,7 +282,7 @@ const TermsOfService = () => {
                 više nema vrijednost računa već se izdaje račun uz kupljenu ulaznicu i kojeg je potrebno sačuvati do
                 dana održavanja događaja. Ukoliko se događaj odloži ili otkaže, nije moguće vratiti ulaznicu i ostvariti
                 reklamaciju odnosno povrat sredstava bez predaje računa koji dokazuju kupovinu ulaznice. Email adresa za
-                prijavu reklamacija je info@etickets.ba.
+                prijavu reklamacija je support@e-tickets.me.
               </p>
 
               <h3 className="text-xl font-semibold mt-6 mb-3">

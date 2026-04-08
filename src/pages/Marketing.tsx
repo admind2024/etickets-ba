@@ -337,8 +337,8 @@ const Marketing = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Marketing i Oglašavanje | etickets"
-        description="Dosegnite preko 243,000 jedinstvenih posjetilaca godišnje. Oglašavajte na vodećoj ticketing platformi u Crnoj Gori."
+        title="Marketing i Oglašavanje | e-tickets"
+        description="Dosegnite preko 243,000 jedinstvenih posjetilaca godišnje. Oglašavajte na vodećoj ticketing platformi u Bosni i Hercegovini, Crnoj Gori i Srbiji."
         basePath="/marketing"
       />
       <Header />
@@ -378,8 +378,8 @@ const Marketing = () => {
                 className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
               >
-                Vodeća platforma za prodaju karata u Crnoj Gori. Sa 243,000+ jedinstvenih posjetilaca godišnje, dosežemo
-                gotovo svakog trećeg stanovnika. Povežite svoj brend sa publikom koja voli događaje.
+                Vodeća platforma za prodaju karata u Bosni i Hercegovini, Crnoj Gori i Srbiji. Sa 243,000+ jedinstvenih posjetilaca godišnje, dosežemo
+                ogromnu publiku u regionu. Povežite svoj brend sa publikom koja voli događaje.
               </p>
               <div
                 className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
@@ -392,7 +392,7 @@ const Marketing = () => {
                   Pogledaj pakete
                 </a>
                 <a
-                  href="mailto:info@etickets.ba"
+                  href="mailto:support@e-tickets.me"
                   className="inline-flex items-center justify-center px-8 py-3 border border-border rounded-lg font-semibold hover:bg-muted hover:scale-105 transition-all duration-300"
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -440,10 +440,10 @@ const Marketing = () => {
                       Tržišna dominacija
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-                      Gotovo svaki <span className="text-primary">treći stanovnik</span> Crne Gore je posjetio etickets
+                      Gotovo svaki <span className="text-primary">treći stanovnik</span> Crne Gore je posjetio e-tickets
                     </h3>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                      Sa 243,237 jedinstvenih posjetilaca od ukupno 623,633 stanovnika (popis 2023.), etickets je
+                      Sa 243,237 jedinstvenih posjetilaca od ukupno 623,633 stanovnika (popis 2023.), e-tickets je
                       najposjećenija ticketing platforma u Crnoj Gori sa{" "}
                       <strong>39% penetracijom ukupne populacije</strong> i
                       <strong> 46.8% penetracijom ciljane populacije</strong> (15+ godina).
@@ -607,7 +607,7 @@ const Marketing = () => {
                         ))}
                       </ul>
                       <a
-                        href={`mailto:info@etickets.ba?subject=Upit za oglašavanje - paket ${pkg.name}`}
+                        href={`mailto:support@e-tickets.me?subject=Upit za oglašavanje - paket ${pkg.name}`}
                         className={`block w-full py-3 text-center rounded-lg font-semibold transition-all duration-300 ${
                           pkg.popular
                             ? "bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105"
@@ -628,7 +628,7 @@ const Marketing = () => {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Zašto oglašavati na etickets?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Zašto oglašavati na e-tickets?</h2>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -707,11 +707,11 @@ const Marketing = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:info@etickets.ba?subject=Upit za oglašavanje"
+                  href="mailto:support@e-tickets.me?subject=Upit za oglašavanje"
                   className="inline-flex items-center justify-center px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-white/90 transition-colors"
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  info@etickets.ba
+                  support@e-tickets.me
                 </a>
               </div>
             </div>

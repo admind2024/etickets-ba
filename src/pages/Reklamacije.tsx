@@ -606,8 +606,8 @@ export default function RefundPage() {
         {/* Footer */}
         <p className="text-center text-xs text-gray-500 mt-4">
           {t.footer}{" "}
-          <a href="mailto:support@etickets.ba" className="text-blue-600">
-            support@etickets.ba
+          <a href="mailto:support@e-tickets.me" className="text-blue-600">
+            support@e-tickets.me
           </a>
         </p>
       </div>

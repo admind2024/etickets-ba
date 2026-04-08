@@ -12,13 +12,13 @@ const PaymentMethods = () => {
 
   const seoContent = {
     bs: {
-      title: "Načini plaćanja | etickets",
+      title: "Načini plaćanja | e-tickets",
       description:
-        "Sigurno i jednostavno plaćanje ulaznica putem platnih kartica, Apple Pay i Google Pay na etickets platformi.",
+        "Sigurno i jednostavno plaćanje ulaznica putem platnih kartica, Apple Pay i Google Pay na e-tickets platformi.",
     },
     en: {
-      title: "Payment Methods | etickets",
-      description: "Safe and simple ticket payment via credit cards, Apple Pay and Google Pay on the etickets platform.",
+      title: "Payment Methods | e-tickets",
+      description: "Safe and simple ticket payment via credit cards, Apple Pay and Google Pay on the e-tickets platform.",
     },
   };
 
@@ -28,9 +28,9 @@ const PaymentMethods = () => {
     bs: {
       title: "Načini plaćanja",
       subtitle: "Sigurno i jednostavno plaćanje putem platnih kartica, Apple Pay i Google Pay.",
-      intro: "Na webshop-u etickets možete plaćati na jedan od sljedećih načina:",
+      intro: "Na webshop-u e-tickets možete plaćati na jedan od sljedećih načina:",
       section1Title: "1. Online plaćanje platnim karticama",
-      section1Text1: "Plaćanje porudžbina se vrši online putem platnih kartica. Web shop etickets prihvata",
+      section1Text1: "Plaćanje porudžbina se vrši online putem platnih kartica. Web shop e-tickets prihvata",
       section1Cards: "MasterCard, Maestro i Visa",
       section1Text2: "kartice koje su od banke izdavaoca odobrene za plaćanje preko Interneta.",
       section1Text3: "Plaćanje karticama je realizovano u saradnji sa",
@@ -39,7 +39,7 @@ const PaymentMethods = () => {
       section1Banks: "domaćim bankama",
       section1Text5: "po potrebi. Sve transakcije se obavljaju na bezbjedan i sertifikovan način.",
       section2Title: "2. Digitalni novčanici",
-      section2Text: "Pored klasičnih platnih kartica, etickets kao jedini u Bosni i Hercegovini nudi mogućnost plaćanja putem",
+      section2Text: "Pored klasičnih platnih kartica, e-tickets kao jedini u regionu nudi mogućnost plaćanja putem",
       section2Wallets: "Apple Pay i Google Pay",
       section2Text2:
         "digitalnih novčanika. Ovo omogućava brzo i sigurno plaćanje bez potrebe za ručnim unosom podataka kartice.",
@@ -52,10 +52,10 @@ const PaymentMethods = () => {
       ],
       section3Title: "3. Odgovornost za transakciju",
       section3Text:
-        "Uplatilac je odgovoran za plaćanje proizvoda, tj. transakciju i prenos novčanih sredstava prema etickets.",
+        "Uplatilac je odgovoran za plaćanje proizvoda, tj. transakciju i prenos novčanih sredstava prema e-tickets.",
       section4Title: "4. Korištenje web shop-a",
       section4Text:
-        "Korištenje web shop-a je trenutno besplatno za sve posjetioce. etickets zadržava pravo naplatiti uslugu u budućnosti za određene usluge koje su prethodno bile besplatne. Uvijek ćete biti blagovremeno obaviješteni o svim promjenama prije nego budete izloženi nekom trošku.",
+        "Korištenje web shop-a je trenutno besplatno za sve posjetioce. e-tickets zadržava pravo naplatiti uslugu u budućnosti za određene usluge koje su prethodno bile besplatne. Uvijek ćete biti blagovremeno obaviješteni o svim promjenama prije nego budete izloženi nekom trošku.",
       securityTitle: "Bezbjednost plaćanja",
       securityText: "Stripe i domaće partnerske banke koriste najsavremenije sigurnosne tehnologije:",
       securityItems: [
@@ -78,9 +78,9 @@ const PaymentMethods = () => {
     en: {
       title: "Payment Methods",
       subtitle: "Safe and simple payment via credit cards, Apple Pay and Google Pay.",
-      intro: "On the etickets webshop you can pay in one of the following ways:",
+      intro: "On the e-tickets webshop you can pay in one of the following ways:",
       section1Title: "1. Online payment by credit cards",
-      section1Text1: "Payment for orders is made online via credit cards. The etickets web shop accepts",
+      section1Text1: "Payment for orders is made online via credit cards. The e-tickets web shop accepts",
       section1Cards: "MasterCard, Maestro and Visa",
       section1Text2: "cards that have been approved by the issuing bank for payment via the Internet.",
       section1Text3: "Card payments are made in cooperation with",
@@ -90,7 +90,7 @@ const PaymentMethods = () => {
       section1Text5: "as needed. All transactions are carried out in a secure and certified manner.",
       section2Title: "2. Digital wallets",
       section2Text:
-        "In addition to classic credit cards, etickets is the only one in Bosnia and Herzegovina that offers the option of paying via",
+        "In addition to classic credit cards, e-tickets is the only platform in the region that offers the option of paying via",
       section2Wallets: "Apple Pay and Google Pay",
       section2Text2:
         "digital wallets. This enables fast and secure payment without the need to manually enter card details.",
@@ -103,10 +103,10 @@ const PaymentMethods = () => {
       ],
       section3Title: "3. Transaction responsibility",
       section3Text:
-        "The payer is responsible for paying for the product, i.e. the transaction and transfer of funds to etickets.",
+        "The payer is responsible for paying for the product, i.e. the transaction and transfer of funds to e-tickets.",
       section4Title: "4. Using the web shop",
       section4Text:
-        "Using the web shop is currently free for all visitors. etickets reserves the right to charge for certain services that were previously free in the future. You will always be notified in advance of any changes before you are exposed to any cost.",
+        "Using the web shop is currently free for all visitors. e-tickets reserves the right to charge for certain services that were previously free in the future. You will always be notified in advance of any changes before you are exposed to any cost.",
       securityTitle: "Payment Security",
       securityText: "Stripe and local partner banks use the most advanced security technologies:",
       securityItems: [

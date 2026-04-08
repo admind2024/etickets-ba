@@ -8,8 +8,8 @@ export const Footer = () => {
   // Translations
   const translations: Record<string, Record<string, string>> = {
     tagline: {
-      bs: "Vaša pouzdana platforma za kupovinu ulaznica za koncerte, festivale i događaje u Bosni i Hercegovini.",
-      en: "Your trusted platform for buying tickets for concerts, festivals and events in Bosnia and Herzegovina.",
+      bs: "e-tickets je regionalni brend za online prodaju ulaznica koji posluje u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
+      en: "e-tickets is a regional brand for online ticket sales operating in Bosnia and Herzegovina, Montenegro and Serbia.",
     },
     quickLinks: { bs: "Brzi linkovi", en: "Quick Links" },
     allEvents: { bs: "Svi događaji", en: "All Events" },
@@ -26,12 +26,12 @@ export const Footer = () => {
     paymentMethods: { bs: "Način plaćanja", en: "Payment Methods" },
     contactTitle: { bs: "Kontakt", en: "Contact" },
     seoText: {
-      bs: "etickets je regionalna platforma za online prodaju ulaznica za koncerte, festivale, sportske i kulturne događaje u Bosni i Hercegovini.",
-      en: "etickets is a regional platform for online ticket sales for concerts, festivals, sports and cultural events in Bosnia and Herzegovina.",
+      bs: "e-tickets je regionalni brend za online prodaju ulaznica za koncerte, festivale, sportske i kulturne događaje. Poslujemo u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
+      en: "e-tickets is a regional brand for online ticket sales for concerts, festivals, sports and cultural events. We operate in Bosnia and Herzegovina, Montenegro and Serbia.",
     },
     copyright: {
-      bs: "© 2025 etickets. Sva prava zadržana.",
-      en: "© 2025 etickets. All rights reserved.",
+      bs: "© 2025 e-tickets. Sva prava zadržana.",
+      en: "© 2025 e-tickets. All rights reserved.",
     },
     privacy: { bs: "Privatnost", en: "Privacy" },
   };
@@ -187,7 +187,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-sm text-primary-foreground/80 justify-center md:justify-start">
                 <Mail className="h-4 w-4 shrink-0" />
-                <span>info@etickets.ba</span>
+                <span>support@e-tickets.me</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-primary-foreground/80 justify-center md:justify-start">
                 <Phone className="h-4 w-4 shrink-0" />
@@ -195,9 +195,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-foreground/80 justify-center md:justify-start">
                 <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
-                <span>
-                  Sarajevo, Bosna i Hercegovina
-                </span>
+                <span>Bosna i Hercegovina</span>
               </li>
             </ul>
           </div>

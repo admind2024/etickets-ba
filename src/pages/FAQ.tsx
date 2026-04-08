@@ -50,12 +50,12 @@ const FAQ = () => {
 
   const seoTranslations = {
     bs: {
-      title: "Česta pitanja | etickets",
-      description: "Pronađite odgovore na najčešća pitanja o kupovini ulaznica na etickets. Informacije o dostavi, plaćanju i povratku ulaznica.",
+      title: "Česta pitanja | e-tickets",
+      description: "Pronađite odgovore na najčešća pitanja o kupovini ulaznica na e-tickets. Informacije o dostavi, plaćanju i povratku ulaznica.",
     },
     en: {
-      title: "Frequently Asked Questions | etickets",
-      description: "Find answers to the most common questions about buying tickets on etickets. Information about delivery, payment and ticket refunds.",
+      title: "Frequently Asked Questions | e-tickets",
+      description: "Find answers to the most common questions about buying tickets on e-tickets. Information about delivery, payment and ticket refunds.",
     },
   };
 
