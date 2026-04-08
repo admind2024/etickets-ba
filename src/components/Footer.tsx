@@ -8,8 +8,8 @@ export const Footer = () => {
   // Translations
   const translations: Record<string, Record<string, string>> = {
     tagline: {
-      bs: "e-tickets je regionalni brend za online prodaju ulaznica koji posluje u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
-      en: "e-tickets is a regional brand for online ticket sales operating in Bosnia and Herzegovina, Montenegro and Serbia.",
+      bs: "etickets je regionalni brend za online prodaju ulaznica koji posluje u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
+      en: "etickets is a regional brand for online ticket sales operating in Bosnia and Herzegovina, Montenegro and Serbia.",
     },
     quickLinks: { bs: "Brzi linkovi", en: "Quick Links" },
     allEvents: { bs: "Svi događaji", en: "All Events" },
@@ -26,12 +26,12 @@ export const Footer = () => {
     paymentMethods: { bs: "Način plaćanja", en: "Payment Methods" },
     contactTitle: { bs: "Kontakt", en: "Contact" },
     seoText: {
-      bs: "e-tickets je regionalni brend za online prodaju ulaznica za koncerte, festivale, sportske i kulturne događaje. Poslujemo u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
-      en: "e-tickets is a regional brand for online ticket sales for concerts, festivals, sports and cultural events. We operate in Bosnia and Herzegovina, Montenegro and Serbia.",
+      bs: "etickets je regionalni brend za online prodaju ulaznica za koncerte, festivale, sportske i kulturne događaje. Poslujemo u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
+      en: "etickets is a regional brand for online ticket sales for concerts, festivals, sports and cultural events. We operate in Bosnia and Herzegovina, Montenegro and Serbia.",
     },
     copyright: {
-      bs: "© 2025 e-tickets. Sva prava zadržana.",
-      en: "© 2025 e-tickets. All rights reserved.",
+      bs: "© 2025 etickets. Sva prava zadržana.",
+      en: "© 2025 etickets. All rights reserved.",
     },
     privacy: { bs: "Privatnost", en: "Privacy" },
   };

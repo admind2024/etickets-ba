@@ -337,7 +337,7 @@ const Marketing = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Marketing i Oglašavanje | e-tickets"
+        title="Marketing i Oglašavanje | etickets"
         description="Dosegnite preko 243,000 jedinstvenih posjetilaca godišnje. Oglašavajte na vodećoj ticketing platformi u Bosni i Hercegovini, Crnoj Gori i Srbiji."
         basePath="/marketing"
       />
@@ -440,10 +440,10 @@ const Marketing = () => {
                       Tržišna dominacija
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-                      Gotovo svaki <span className="text-primary">treći stanovnik</span> Crne Gore je posjetio e-tickets
+                      Gotovo svaki <span className="text-primary">treći stanovnik</span> Crne Gore je posjetio etickets
                     </h3>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                      Sa 243,237 jedinstvenih posjetilaca od ukupno 623,633 stanovnika (popis 2023.), e-tickets je
+                      Sa 243,237 jedinstvenih posjetilaca od ukupno 623,633 stanovnika (popis 2023.), etickets je
                       najposjećenija ticketing platforma u Crnoj Gori sa{" "}
                       <strong>39% penetracijom ukupne populacije</strong> i
                       <strong> 46.8% penetracijom ciljane populacije</strong> (15+ godina).
@@ -628,7 +628,7 @@ const Marketing = () => {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Zašto oglašavati na e-tickets?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Zašto oglašavati na etickets?</h2>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">

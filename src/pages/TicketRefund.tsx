@@ -12,12 +12,12 @@ const RefundPolicy = () => {
 
   const seoContent = {
     bs: {
-      title: "Povrat novca i reklamacije | e-tickets",
-      description: "Sve o vraćanju ulaznica, refundaciji i osiguranju ulaznica na e-tickets platformi.",
+      title: "Povrat novca i reklamacije | etickets",
+      description: "Sve o vraćanju ulaznica, refundaciji i osiguranju ulaznica na etickets platformi.",
     },
     en: {
-      title: "Refunds and Complaints | e-tickets",
-      description: "Everything about returning tickets, refunds and ticket insurance on e-tickets platform.",
+      title: "Refunds and Complaints | etickets",
+      description: "Everything about returning tickets, refunds and ticket insurance on etickets platform.",
     },
   };
 

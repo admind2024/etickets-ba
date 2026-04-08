@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
-const SITE_NAME = "e-tickets";
+const SITE_NAME = "etickets";
 const BASE_URL = "https://etickets.ba";
 const DEFAULT_IMAGE = "https://etickets.ba/og-image.jpg";
 const DEFAULT_LOCALE = "bs_BA";
@@ -52,7 +52,7 @@ interface SEOProps {
  */
 const SEO = ({
   title = `${SITE_NAME} | Ulaznice za koncerte i događaje u BiH, Crnoj Gori i Srbiji`,
-  description = "e-tickets je regionalni brend za online prodaju ulaznica za koncerte, festivale i događaje. Poslujemo u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
+  description = "etickets je regionalni brend za online prodaju ulaznica za koncerte, festivale i događaje. Poslujemo u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
   url,
   image,
   locale,

@@ -12,12 +12,12 @@ const PrivacyPolicy = () => {
 
   const seoContent = {
     bs: {
-      title: "Politika privatnosti | e-tickets",
-      description: "Politika privatnosti e-tickets. Saznajte kako prikupljamo, koristimo i štitimo vaše lične podatke.",
+      title: "Politika privatnosti | etickets",
+      description: "Politika privatnosti etickets. Saznajte kako prikupljamo, koristimo i štitimo vaše lične podatke.",
     },
     en: {
-      title: "Privacy Policy | e-tickets",
-      description: "Privacy policy of e-tickets. Learn how we collect, use and protect your personal data.",
+      title: "Privacy Policy | etickets",
+      description: "Privacy policy of etickets. Learn how we collect, use and protect your personal data.",
     },
   };
 

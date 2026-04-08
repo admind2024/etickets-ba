@@ -1509,7 +1509,7 @@ function TicketCard({
       {/* ── FOOTER ── */}
       <div style={{ background: "#f7f7f7", borderTop: "1px solid #eee", padding: "10px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <span style={{ fontSize: 8, color: "#aaa" }}>www.fscg.me</span>
-        <span style={{ fontSize: 8, fontWeight: 600, color: "#888" }}>e-tickets</span>
+        <span style={{ fontSize: 8, fontWeight: 600, color: "#888" }}>etickets</span>
         <span style={{ fontSize: 8, color: "#aaa" }}>fscg_official</span>
       </div>
 
@@ -2167,7 +2167,7 @@ export default function FscgTicketDisplay() {
           {/* Footer */}
           <div style={{ background: "#f5f5f5", borderTop: "1px solid #eee", padding: "10px 24px", display: "flex", justifyContent: "space-between" }}>
             <span style={{ fontSize: 9, color: "#aaa" }}>www.fscg.me</span>
-            <span style={{ fontSize: 9, fontWeight: 600, color: "#999" }}>e-tickets</span>
+            <span style={{ fontSize: 9, fontWeight: 600, color: "#999" }}>etickets</span>
           </div>
         </div>
       </div>
@@ -2578,7 +2578,7 @@ export default function FscgTicketDisplay() {
             );
           })()}
 
-          <div className="footer" style={{ marginTop: 28 }}>e-tickets</div>
+          <div className="footer" style={{ marginTop: 28 }}>etickets</div>
         </div>
 
         {/* Floating forward bar when tickets are selected */}
@@ -2787,7 +2787,7 @@ export default function FscgTicketDisplay() {
             </div>
           )}
 
-          <div className="footer">Powered by e-tickets &bull; FSCG</div>
+          <div className="footer">Powered by etickets &bull; FSCG</div>
         </div>
         {renderSaveWarningModal()}
         {renderFullscreenPass()}
@@ -2855,7 +2855,7 @@ export default function FscgTicketDisplay() {
             />
           </div>
 
-          <div className="footer">Powered by e-tickets &bull; FSCG</div>
+          <div className="footer">Powered by etickets &bull; FSCG</div>
         </div>
         {renderSaveWarningModal()}
         {renderFullscreenPass()}
@@ -2891,7 +2891,7 @@ export default function FscgTicketDisplay() {
           ))}
         </div>
 
-        <div className="footer">Powered by e-tickets &bull; FSCG</div>
+        <div className="footer">Powered by etickets &bull; FSCG</div>
       </div>
 
       {/* MODALI */}

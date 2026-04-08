@@ -11,9 +11,9 @@ const HowToBuy = () => {
   const content = {
     bs: {
       seo: {
-        title: "Kako kupiti ulaznice online putem e-tickets platforme | e-tickets",
+        title: "Kako kupiti ulaznice online putem etickets platforme | etickets",
         description:
-          "Saznajte kako kupiti ulaznice online putem e-tickets. Jednostavan proces kupovine u par klikova za koncerte, festivale i događaje u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
+          "Saznajte kako kupiti ulaznice online putem etickets. Jednostavan proces kupovine u par klikova za koncerte, festivale i događaje u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
       },
       h1: "Kako kupiti ulaznice online",
       subtitle:
@@ -56,9 +56,9 @@ const HowToBuy = () => {
     },
     en: {
       seo: {
-        title: "How to Buy Tickets Online via e-tickets Platform | e-tickets",
+        title: "How to Buy Tickets Online via etickets Platform | etickets",
         description:
-          "Learn how to buy tickets online via e-tickets. Simple purchasing process in just a few clicks for concerts, festivals and events in Bosnia and Herzegovina, Montenegro and Serbia.",
+          "Learn how to buy tickets online via etickets. Simple purchasing process in just a few clicks for concerts, festivals and events in Bosnia and Herzegovina, Montenegro and Serbia.",
       },
       h1: "How to Buy Tickets Online",
       subtitle:

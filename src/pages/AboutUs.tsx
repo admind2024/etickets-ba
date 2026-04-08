@@ -43,20 +43,20 @@ const AboutUs = () => {
     }
   > = {
     bs: {
-      seoTitle: "O nama | e-tickets",
+      seoTitle: "O nama | etickets",
       seoDescription:
-        "e-tickets je vodeća regionalna platforma za online kupovinu i prodaju ulaznica u Bosni i Hercegovini, Crnoj Gori i Srbiji. Brzo, sigurno i jednostavno.",
+        "etickets je vodeća regionalna platforma za online kupovinu i prodaju ulaznica u Bosni i Hercegovini, Crnoj Gori i Srbiji. Brzo, sigurno i jednostavno.",
       whoWeAre: "Ko smo mi?",
       whoWeAreText1:
-        "e-tickets je vodeća regionalna platforma za online kupovinu i prodaju ulaznica u Bosni i Hercegovini, Crnoj Gori i Srbiji. Putem savremenog sistema e-tickets, korisnicima i organizatorima omogućavamo potpuno digitalizovano iskustvo – brzo, sigurno i jednostavno, bez čekanja u redovima i bez štampanja karata.",
+        "etickets je vodeća regionalna platforma za online kupovinu i prodaju ulaznica u Bosni i Hercegovini, Crnoj Gori i Srbiji. Putem savremenog sistema etickets, korisnicima i organizatorima omogućavamo potpuno digitalizovano iskustvo – brzo, sigurno i jednostavno, bez čekanja u redovima i bez štampanja karata.",
       whoWeAreText2:
         "Na jednom mjestu povezujemo publiku sa najznačajnijim događajima širom regiona, dok organizatorima pružamo moćan alat za profesionalnu prodaju i upravljanje ulaznicama.",
       ourVision: "Naša vizija",
       ourVisionText:
-        "Vizija platforme e-tickets je da postane centralno regionalno mjesto za prodaju ulaznica u Bosni i Hercegovini, Crnoj Gori, Srbiji i šire, spajajući modernu tehnologiju sa industrijom događaja i stvarajući novu dimenziju live-entertainment iskustva.",
+        "Vizija platforme etickets je da postane centralno regionalno mjesto za prodaju ulaznica u Bosni i Hercegovini, Crnoj Gori, Srbiji i šire, spajajući modernu tehnologiju sa industrijom događaja i stvarajući novu dimenziju live-entertainment iskustva.",
       whatWeOffer: "Šta nudimo?",
       whatWeOfferIntro:
-        "Kroz e-tickets regionalni sistem obezbjeđujemo kompletnu infrastrukturu za digitalnu prodaju ulaznica:",
+        "Kroz etickets regionalni sistem obezbjeđujemo kompletnu infrastrukturu za digitalnu prodaju ulaznica:",
       offer1: "Brzu i sigurnu kupovinu ulaznica putem više metoda plaćanja",
       offer2: "Automatsku isporuku e-ulaznica na e-mail ili mobilni telefon",
       offer3: "Validaciju karata putem QR koda, bez gužvi na ulazu",
@@ -64,10 +64,10 @@ const AboutUs = () => {
       offer5: "Praćenje prodaje u realnom vremenu kroz napredni administrativni panel",
       partnerships: "Partnerstva i podrška događajima",
       partnershipsText1:
-        "Na platformi e-tickets svakodnevno se nalaze deseci aktuelnih događaja iz Bosne i Hercegovine, Crne Gore, Srbije i regiona. Sarađujemo sa muzičkim festivalima, velikim koncertima, sportskim manifestacijama, pozorištima i brojnim produkcijama.",
+        "Na platformi etickets svakodnevno se nalaze deseci aktuelnih događaja iz Bosne i Hercegovine, Crne Gore, Srbije i regiona. Sarađujemo sa muzičkim festivalima, velikim koncertima, sportskim manifestacijama, pozorištima i brojnim produkcijama.",
       partnershipsText2:
-        "Kao prepoznat regionalni distributer ulaznica, e-tickets je postao ključni partner za najznačajnije događaje na Balkanu.",
-      whyUs: "Zašto baš e-tickets?",
+        "Kao prepoznat regionalni distributer ulaznica, etickets je postao ključni partner za najznačajnije događaje na Balkanu.",
+      whyUs: "Zašto baš etickets?",
       simple: "Jednostavno",
       simpleText: "Kupovina ulaznica za događaje širom regiona u par klikova",
       secure: "Sigurno",
@@ -76,22 +76,22 @@ const AboutUs = () => {
       exclusiveText: "Pristup najatraktivnijim događajima prije svih",
       support: "Podrška 24/7",
       supportText: "Regionalni tim koji je uvijek na raspolaganju",
-      slogan: "e-tickets – Tvoja ulaznica za svaki događaj",
+      slogan: "etickets – Tvoja ulaznica za svaki događaj",
     },
     en: {
-      seoTitle: "About Us | e-tickets",
-      seoDescription: "e-tickets is the leading regional platform for online ticket sales in Bosnia and Herzegovina, Montenegro and Serbia. Fast, secure, and simple.",
+      seoTitle: "About Us | etickets",
+      seoDescription: "etickets is the leading regional platform for online ticket sales in Bosnia and Herzegovina, Montenegro and Serbia. Fast, secure, and simple.",
       whoWeAre: "Who are we?",
       whoWeAreText1:
-        "e-tickets is the leading regional platform for online ticket purchase and sales in Bosnia and Herzegovina, Montenegro and Serbia. Through our modern e-tickets system, we provide users and organizers with a fully digitalized experience – fast, secure, and simple, without waiting in lines or printing tickets.",
+        "etickets is the leading regional platform for online ticket purchase and sales in Bosnia and Herzegovina, Montenegro and Serbia. Through our modern etickets system, we provide users and organizers with a fully digitalized experience – fast, secure, and simple, without waiting in lines or printing tickets.",
       whoWeAreText2:
         "We connect audiences with the most significant events across the region in one place, while providing organizers with a powerful tool for professional ticket sales and management.",
       ourVision: "Our Vision",
       ourVisionText:
-        "The vision of the e-tickets platform is to become the central regional hub for ticket sales in Bosnia and Herzegovina, Montenegro, Serbia, and beyond, combining modern technology with the events industry and creating a new dimension of live entertainment experience.",
+        "The vision of the etickets platform is to become the central regional hub for ticket sales in Bosnia and Herzegovina, Montenegro, Serbia, and beyond, combining modern technology with the events industry and creating a new dimension of live entertainment experience.",
       whatWeOffer: "What do we offer?",
       whatWeOfferIntro:
-        "Through the e-tickets regional system, we provide complete infrastructure for digital ticket sales:",
+        "Through the etickets regional system, we provide complete infrastructure for digital ticket sales:",
       offer1: "Fast and secure ticket purchases through multiple payment methods",
       offer2: "Automatic e-ticket delivery to email or mobile phone",
       offer3: "QR code ticket validation, without crowds at the entrance",
@@ -99,10 +99,10 @@ const AboutUs = () => {
       offer5: "Real-time sales tracking through an advanced admin panel",
       partnerships: "Partnerships and Event Support",
       partnershipsText1:
-        "The e-tickets platform daily features dozens of current events from Bosnia and Herzegovina, Montenegro, Serbia, and the region. We collaborate with music festivals, major concerts, sports events, theaters, and numerous productions.",
+        "The etickets platform daily features dozens of current events from Bosnia and Herzegovina, Montenegro, Serbia, and the region. We collaborate with music festivals, major concerts, sports events, theaters, and numerous productions.",
       partnershipsText2:
-        "As a recognized regional ticket distributor, e-tickets has become a key partner for the most significant events in the Balkans.",
-      whyUs: "Why choose e-tickets?",
+        "As a recognized regional ticket distributor, etickets has become a key partner for the most significant events in the Balkans.",
+      whyUs: "Why choose etickets?",
       simple: "Simple",
       simpleText: "Buy tickets for events across the region in just a few clicks",
       secure: "Secure",
@@ -111,7 +111,7 @@ const AboutUs = () => {
       exclusiveText: "Access to the most attractive events before anyone else",
       support: "24/7 Support",
       supportText: "A regional team always at your service",
-      slogan: "e-tickets – Your ticket to every event",
+      slogan: "etickets – Your ticket to every event",
     },
   };
 
@@ -127,7 +127,7 @@ const AboutUs = () => {
         <section className="mb-16">
           <h1 className="text-4xl font-bold text-foreground mb-6">{t.whoWeAre}</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            <span className="font-semibold text-primary">e-tickets</span> {t.whoWeAreText1.replace("e-tickets ", "")}
+            <span className="font-semibold text-primary">etickets</span> {t.whoWeAreText1.replace("etickets ", "")}
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mt-4">{t.whoWeAreText2}</p>
         </section>
@@ -136,10 +136,10 @@ const AboutUs = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-6">{t.ourVision}</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            {t.ourVisionText.split("e-tickets").map((part, i, arr) => (
+            {t.ourVisionText.split("etickets").map((part, i, arr) => (
               <span key={i}>
                 {part}
-                {i < arr.length - 1 && <span className="font-semibold text-primary">e-tickets</span>}
+                {i < arr.length - 1 && <span className="font-semibold text-primary">etickets</span>}
               </span>
             ))}
           </p>
@@ -149,10 +149,10 @@ const AboutUs = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-6">{t.whatWeOffer}</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            {t.whatWeOfferIntro.split("e-tickets").map((part, i, arr) => (
+            {t.whatWeOfferIntro.split("etickets").map((part, i, arr) => (
               <span key={i}>
                 {part}
-                {i < arr.length - 1 && <span className="font-semibold text-primary">e-tickets</span>}
+                {i < arr.length - 1 && <span className="font-semibold text-primary">etickets</span>}
               </span>
             ))}
           </p>
@@ -184,18 +184,18 @@ const AboutUs = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-6">{t.partnerships}</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            {t.partnershipsText1.split("e-tickets").map((part, i, arr) => (
+            {t.partnershipsText1.split("etickets").map((part, i, arr) => (
               <span key={i}>
                 {part}
-                {i < arr.length - 1 && <span className="font-semibold text-primary">e-tickets</span>}
+                {i < arr.length - 1 && <span className="font-semibold text-primary">etickets</span>}
               </span>
             ))}
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-            {t.partnershipsText2.split("e-tickets").map((part, i, arr) => (
+            {t.partnershipsText2.split("etickets").map((part, i, arr) => (
               <span key={i}>
                 {part}
-                {i < arr.length - 1 && <span className="font-semibold text-primary">e-tickets</span>}
+                {i < arr.length - 1 && <span className="font-semibold text-primary">etickets</span>}
               </span>
             ))}
           </p>

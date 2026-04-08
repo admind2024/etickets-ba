@@ -28,11 +28,11 @@ const AboutSection = () => {
   > = {
     bs: {
       title: "Zašto",
-      titleHighlight: "e-tickets?",
+      titleHighlight: "etickets?",
       description1:
         "Nudimo sigurnu kupovinu karata sa SSL enkripcijom i zaštićenim transakcijama. Vaše e-karte stižu instant na email, a naš tim podrške dostupan je 24/7. Garantujemo najbolje cijene bez skrivenih troškova, a sve karte možete prikazati direktno na telefonu.",
       description2:
-        "Na e-tickets platformi možete pronaći karte za koncerte, pozorišne predstave, sportske događaje, festivale, stand-up nastupe, klubske evente, dječije predstave, kulturne manifestacije, konferencije i mnoge druge specijalne događaje u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
+        "Na etickets platformi možete pronaći karte za koncerte, pozorišne predstave, sportske događaje, festivale, stand-up nastupe, klubske evente, dječije predstave, kulturne manifestacije, konferencije i mnoge druge specijalne događaje u Bosni i Hercegovini, Crnoj Gori i Srbiji.",
       features: {
         securePurchase: { title: "Sigurna kupovina", description: "SSL enkripcija" },
         instantDelivery: { title: "Instant dostava", description: "E-karte na email" },
@@ -42,11 +42,11 @@ const AboutSection = () => {
     },
     en: {
       title: "Why",
-      titleHighlight: "e-tickets?",
+      titleHighlight: "etickets?",
       description1:
         "We offer secure ticket purchases with SSL encryption and protected transactions. Your e-tickets arrive instantly via email, and our support team is available 24/7. We guarantee the best prices with no hidden fees, and all tickets can be displayed directly on your phone.",
       description2:
-        "On the e-tickets platform you can find tickets for concerts, theater performances, sports events, festivals, stand-up shows, club events, children's shows, cultural events, conferences and many other special events in Bosnia and Herzegovina, Montenegro and Serbia.",
+        "On the etickets platform you can find tickets for concerts, theater performances, sports events, festivals, stand-up shows, club events, children's shows, cultural events, conferences and many other special events in Bosnia and Herzegovina, Montenegro and Serbia.",
       features: {
         securePurchase: { title: "Secure Purchase", description: "SSL encryption" },
         instantDelivery: { title: "Instant Delivery", description: "E-tickets to email" },

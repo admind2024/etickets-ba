@@ -95,8 +95,8 @@ const ContactPage = () => {
     }
   > = {
     bs: {
-      seoTitle: "Kontakt | e-tickets",
-      seoDescription: "Kontaktirajte e-tickets tim za sva pitanja o kupovini ulaznica. Naš tim je spreman da vam pomogne.",
+      seoTitle: "Kontakt | etickets",
+      seoDescription: "Kontaktirajte etickets tim za sva pitanja o kupovini ulaznica. Naš tim je spreman da vam pomogne.",
       heroBadge: "Tu smo za vas",
       heroTitle: "Kontaktirajte nas",
       heroSubtitle: "Imate pitanje ili trebate pomoć? Naš tim je spreman da vam pomogne.",
@@ -153,8 +153,8 @@ const ContactPage = () => {
       },
     },
     en: {
-      seoTitle: "Contact | e-tickets",
-      seoDescription: "Contact e-tickets team for all questions about ticket purchases. Our team is ready to help you.",
+      seoTitle: "Contact | etickets",
+      seoDescription: "Contact etickets team for all questions about ticket purchases. Our team is ready to help you.",
       heroBadge: "We're here for you",
       heroTitle: "Contact Us",
       heroSubtitle: "Have a question or need help? Our team is ready to assist you.",

@@ -32,7 +32,7 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({
-  title = "e-tickets | Ulaznice za koncerte i događaje u Bosni i Hercegovini, Crnoj Gori i Srbiji",
+  title = "etickets | Ulaznice za koncerte i događaje u Bosni i Hercegovini, Crnoj Gori i Srbiji",
   description = "Kupite ulaznice za najbolje koncerte, festivale i događaje u Bosni i Hercegovini, Crnoj Gori, Srbiji i regionu. Brzo, sigurno, jednostavno.",
   image = "/og-image.jpg",
   type = "website",
@@ -115,7 +115,7 @@ const SEOHead = ({
       <meta property="og:image" content={absoluteImage} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="e-tickets" />
+      <meta property="og:site_name" content="etickets" />
       <meta property="og:locale" content={ogLocale} />
 
       {/* Twitter */}
