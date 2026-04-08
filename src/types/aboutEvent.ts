@@ -33,6 +33,9 @@ export interface AboutEvent {
   performer?: string;
   biografija?: string;
 
+  // Country filtering
+  country?: string;
+
   // Match-specific fields
   is_match?: boolean;
   sport?: string;

@@ -209,8 +209,20 @@ export const useAboutEvents = () => {
     queryFn: async (): Promise<AboutEvent[]> => {
       const events = await getEventsI18n(lang);
 
+      // CDN ne vraća country polje - dopuni iz Supabase
+      const { data: countryData } = await supabase
+        .from("AboutEvents")
+        .select("id, country");
+      const countryMap = new Map<string, string>();
+      if (countryData) {
+        countryData.forEach((row: any) => {
+          if (row.country) countryMap.set(row.id, row.country);
+        });
+      }
+
       const today = new Date().toISOString().split("T")[0];
       const filtered = (events || [])
+        .map((e: any) => ({ ...e, country: e.country || countryMap.get(e.id) || "ME" }))
         .filter((e: AboutEvent) => !e?.date || e.date >= today)
         .sort((a: AboutEvent, b: AboutEvent) => (a.date || "").localeCompare(b.date || ""));
 
