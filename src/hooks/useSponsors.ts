@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getSponsors } from "@/lib/eventApi";
+import { supabase } from "@/integrations/supabase/client";
 import { useEffect } from "react";
 
 export interface SponsorBanner {
@@ -127,20 +127,52 @@ const preloadImages = (data: SponsorsData) => {
 // ============================================
 export const useSponsors = () => {
   const query = useQuery({
-    queryKey: ["sponsors"],
+    queryKey: ["sponsors", "BA"],
     queryFn: async (): Promise<SponsorsData> => {
       try {
-        // Poziva CF Worker koji kešira 10 min
-        const data = await getSponsors();
-        const sponsorsData = data as SponsorsData;
+        // Direktno iz Supabase, filtrirano po country=BA
+        const { data, error } = await supabase
+          .from("Sponzori")
+          .select("*")
+          .eq("country", "BA")
+          .limit(1)
+          .maybeSingle();
 
-        // Sačuvaj u localStorage za instant prikaz
+        if (error) throw error;
+
+        const sponsorsData: SponsorsData = { topBanners: [], bottomBanner: null };
+
+        if (data) {
+          if (data.image1) {
+            sponsorsData.topBanners.push({
+              id: `${data.id}-1`,
+              image: data.image1,
+              link: data.link1 || "#",
+              alt: data.name1 || "Sponzor 1",
+            });
+          }
+          if (data.image2) {
+            sponsorsData.topBanners.push({
+              id: `${data.id}-2`,
+              image: data.image2,
+              link: data.link2 || "#",
+              alt: data.name2 || "Sponzor 2",
+            });
+          }
+          if (data.image3) {
+            sponsorsData.bottomBanner = {
+              id: `${data.id}-3`,
+              image: data.image3,
+              link: data.link3 || "#",
+              alt: data.name3 || "Sponzor",
+            };
+          }
+        }
+
         saveToCache(sponsorsData);
-
         return sponsorsData;
       } catch (err) {
         console.error("useSponsors error:", err);
-        // Fallback na keš ako API ne radi
         return getFromCache() || { topBanners: [], bottomBanner: null };
       }
     },
