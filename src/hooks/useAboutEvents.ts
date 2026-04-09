@@ -100,11 +100,11 @@ export const parseCategories = (categories: any): TicketCategory[] => {
 
     for (const part of parts) {
       // Try "Category - 100 EUR" format (greedy .+ to match LAST dash-number pair)
-      const dashMatch = part.trim().match(/^(.+)\s*-\s*(\d+)\s*(EUR|€|RSD|MKD|CHF)?$/i);
+      const dashMatch = part.trim().match(/^(.+)\s*-\s*(\d+(?:[.,]\d+)?)\s*(EUR|€|RSD|MKD|CHF)?$/i);
       if (dashMatch) {
         result.push({
           category: dashMatch[1].trim(),
-          price: parseInt(dashMatch[2], 10),
+          price: parseFloat(dashMatch[2].replace(",", ".")),
         });
         continue;
       }

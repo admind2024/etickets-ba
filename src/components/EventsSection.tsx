@@ -485,7 +485,13 @@ const EventsSection = () => {
 
         {/* Events Grid */}
         {!showLoading && displayGroups.length > 0 && (
-          <div className={`grid ${displayGroups.length > 5 ? "grid-cols-2" : "grid-cols-1"} lg:grid-cols-3 gap-3 md:gap-8`}>
+          <div className={`grid gap-3 md:gap-8 ${
+              displayGroups.length === 1
+                ? "grid-cols-1 max-w-md mx-auto"
+                : displayGroups.length === 2
+                  ? "grid-cols-1 sm:grid-cols-2 max-w-3xl mx-auto"
+                  : "grid-cols-2 lg:grid-cols-3"
+            }`}>
             {displayGroups.map((group, index) => {
               const event = group.representative;
               return (
