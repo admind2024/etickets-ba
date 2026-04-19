@@ -692,10 +692,26 @@ export default function TicketDisplay() {
     getCryptoKey();
   }, []);
 
-  // Fetch poster2 iz Sponzori tabele
+  // Fetch poster2 iz Sponzori tabele (preskoči ako je događaj iz BiH)
   useEffect(() => {
+    const firstEventId = tickets[0]?.eventId;
+    if (!firstEventId) return;
+
     const fetchPoster = async () => {
       try {
+        const { data: eventData } = await supabase
+          .from("AboutEvents")
+          .select("country")
+          .eq("id", firstEventId)
+          .maybeSingle();
+
+        if (eventData?.country === "BA") {
+          console.log("🇧🇦 Događaj je iz BiH — poster se ne prikazuje.");
+          setPosterUrl(null);
+          setPosterLink(null);
+          return;
+        }
+
         const { data, error } = await supabase.from("Sponzori").select("poster2, linkPosterKarte").limit(1).maybeSingle();
 
         if (!error && data?.poster2) {
@@ -709,7 +725,7 @@ export default function TicketDisplay() {
     };
 
     fetchPoster();
-  }, []);
+  }, [tickets]);
 
   // Tracking impresija sponzora na kartama
   useEffect(() => {
