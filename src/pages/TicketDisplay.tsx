@@ -692,7 +692,7 @@ export default function TicketDisplay() {
     getCryptoKey();
   }, []);
 
-  // Fetch poster2 iz Sponzori tabele (preskoči ako je događaj iz BiH)
+  // Fetch poster2 iz Sponzori tabele — samo ako sponsor.country === event.country
   useEffect(() => {
     const firstEventId = tickets[0]?.eventId;
     if (!firstEventId) return;
@@ -705,19 +705,29 @@ export default function TicketDisplay() {
           .eq("id", firstEventId)
           .maybeSingle();
 
-        if (eventData?.country === "BA") {
-          console.log("🇧🇦 Događaj je iz BiH — poster se ne prikazuje.");
+        const eventCountry = eventData?.country;
+        if (!eventCountry) {
+          console.log("ℹ️ Događaj nema country — poster se ne prikazuje.");
           setPosterUrl(null);
           setPosterLink(null);
           return;
         }
 
-        const { data, error } = await supabase.from("Sponzori").select("poster2, linkPosterKarte").limit(1).maybeSingle();
+        const { data, error } = await supabase
+          .from("Sponzori")
+          .select("poster2, linkPosterKarte")
+          .eq("country", eventCountry)
+          .limit(1)
+          .maybeSingle();
 
         if (!error && data?.poster2) {
           setPosterUrl(data.poster2);
           setPosterLink(data.linkPosterKarte || null);
-          console.log("📸 Poster2 učitan:", data.poster2, "Link:", data.linkPosterKarte);
+          console.log(`📸 Poster2 učitan (${eventCountry}):`, data.poster2, "Link:", data.linkPosterKarte);
+        } else {
+          setPosterUrl(null);
+          setPosterLink(null);
+          console.log(`ℹ️ Nema postera za country=${eventCountry}.`);
         }
       } catch (err) {
         console.error("Greška pri učitavanju postera:", err);
