@@ -1085,6 +1085,20 @@ serve(async (req) => {
 
     if (event.type === "checkout.session.completed") {
       const session = event.data.object as Stripe.Checkout.Session;
+      // ═══════════════════════════════════════════════════════════════
+      // 🚫 RSD GUARD: srpske transakcije obrađuje stripe-webhook-seat-rs
+      // (bez fiskalizacije). Ovaj endpoint odgovara samo za EUR/CG flow.
+      // NE BRISATI — bez ovoga CG webhook šalje CG mejl i CG fiskalizaciju
+      // za srpske RSD kupovine (vidi incident 2026-06-12, order #30108913).
+      // ═══════════════════════════════════════════════════════════════
+      if ((session.currency || "").toLowerCase() === "rsd") {
+        console.log("⏭️ Skipping RSD session — handled by stripe-webhook-seat-rs");
+        return new Response(
+          JSON.stringify({ received: true, skipped: true, reason: "RSD currency, handled by -rs webhook" }),
+          { headers: { "Content-Type": "application/json" } },
+        );
+      }
+
 
       console.log("Session ID:", session.id);
       console.log("Payment status:", session.payment_status);
