@@ -566,7 +566,6 @@ body,.dm-body{background-color:#1a1a2e!important}
     from: { address: "noreply@my.e-tickets.me", name: "e-tickets" },
     to: [
       { email_address: { address: customerEmail, name: customerName || "" } },
-      { email_address: { address: "tickets@e-tickets.me", name: "e-tickets Archive" } },
     ],
     subject: `🎫 Vaše karte: ${eventName}`,
     htmlbody: htmlBody,
