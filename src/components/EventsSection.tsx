@@ -4,6 +4,8 @@ import { useQuery } from "@tanstack/react-query";
 import { EventCard } from "./EventCard";
 import {
   getImageUrl,
+  getSizedImageUrl,
+  getImageSrcSet,
   parseCategories,
   getLowestPrice,
   formatEventDate,
@@ -54,13 +56,19 @@ const preloadEventImages = (events: any[]) => {
   if (typeof document === "undefined" || !events?.length) return;
 
   events.slice(0, 6).forEach((event, index) => {
-    const src = getImageUrl(event.image);
+    // Ista smanjena verzija koju EventCard prikazuje (inače dupli download originala).
+    const src = getSizedImageUrl(event.image, 640);
     if (!src || document.querySelector(`link[href="${src}"]`)) return;
 
     const link = document.createElement("link");
     link.rel = "preload";
     link.as = "image";
     link.href = src;
+    const srcSet = getImageSrcSet(event.image);
+    if (srcSet) {
+      link.setAttribute("imagesrcset", srcSet);
+      link.setAttribute("imagesizes", "(min-width: 1024px) 440px, 50vw");
+    }
     if (index < 3) {
       link.setAttribute("fetchpriority", "high");
     }

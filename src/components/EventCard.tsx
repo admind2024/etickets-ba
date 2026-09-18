@@ -4,6 +4,10 @@ import { MapPin, Calendar, Star, CalendarDays, MapPinned } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getImageSrcSet, getSizedImageUrl } from "@/hooks/useAboutEvents";
+
+// Grid: 2 kolone mobilni/tablet, 3 na desktopu (container max ~1400px).
+const CARD_SIZES = "(min-width: 1024px) 440px, 50vw";
 
 // Prevodi
 const translations: Record<string, Record<string, string>> = {
@@ -61,6 +65,8 @@ export const EventCard = memo(
   ({ event, index = 0, lazy = true, featured = false, variantsCount, variantsType }: EventCardProps) => {
     const [imageLoaded, setImageLoaded] = useState(!lazy && !featured);
     const [imageError, setImageError] = useState(false);
+    // Smanjena (render/image) verzija pala → probaj original prije placeholdera.
+    const [sizedFailed, setSizedFailed] = useState(false);
     const { lang: currentLang } = useLanguage();
 
     const t = (key: string) => translations[key]?.[currentLang] || translations[key]?.bs || key;
@@ -187,13 +193,15 @@ export const EventCard = memo(
               {!imageLoaded && !imageError && <div className="absolute inset-0 bg-muted animate-pulse" />}
 
               <img
-                src={imageError ? "/placeholder.svg" : event.image}
+                src={imageError ? "/placeholder.svg" : sizedFailed ? event.image : getSizedImageUrl(event.image, 640)}
+                srcSet={imageError || sizedFailed ? undefined : getImageSrcSet(event.image)}
+                sizes={CARD_SIZES}
                 alt={event.title}
                 className={cn("w-full h-full object-cover transition-transform duration-500", "group-hover:scale-105")}
                 loading="eager"
                 decoding="async"
                 onLoad={() => setImageLoaded(true)}
-                onError={() => setImageError(true)}
+                onError={() => (sizedFailed ? setImageError(true) : setSizedFailed(true))}
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
@@ -261,14 +269,16 @@ export const EventCard = memo(
             {!imageLoaded && !imageError && <div className="absolute inset-0 bg-muted animate-pulse" />}
 
             <img
-              src={imageError ? "/placeholder.svg" : event.image}
+              src={imageError ? "/placeholder.svg" : sizedFailed ? event.image : getSizedImageUrl(event.image, 640)}
+                srcSet={imageError || sizedFailed ? undefined : getImageSrcSet(event.image)}
+                sizes={CARD_SIZES}
               alt={event.title}
               width={600}
               height={450}
               loading={lazy ? "lazy" : "eager"}
               decoding="async"
               onLoad={() => setImageLoaded(true)}
-              onError={() => setImageError(true)}
+              onError={() => (sizedFailed ? setImageError(true) : setSizedFailed(true))}
               className={cn(
                 "w-full h-full object-cover transition-all duration-500",
                 "group-hover:scale-105",

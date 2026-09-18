@@ -198,6 +198,30 @@ export const getImageUrl = (imageStr: string | null | undefined): string => {
   return imageStr;
 };
 
+// Smanjena verzija slike (Supabase render/image kroz CDN worker). Bez ovoga
+// pločica od ~160px vuče i dekodira original 1080×1350 — to je bilo sjeckanje
+// početne. resize=contain je obavezan: sam width SIJEČE sliku umjesto da je smanji.
+// Fiksne širine da broj transformacija/keš varijanti ostane mali.
+export const IMAGE_WIDTHS = [320, 640, 960] as const;
+const STORAGE_OBJECT = "/storage/v1/object/public/";
+const STORAGE_RENDER = "/storage/v1/render/image/public/";
+
+export const getSizedImageUrl = (imageStr: string | null | undefined, width: number): string => {
+  const url = getImageUrl(imageStr);
+  if (!url.includes(STORAGE_OBJECT) || /\.(svg|gif)(\?|$)/i.test(url)) return url;
+  return `${url.split("?")[0].replace(STORAGE_OBJECT, STORAGE_RENDER)}?width=${width}&resize=contain&quality=70`;
+};
+
+/** srcset za <img>; undefined kad slika nije iz Supabase storage-a (nema šta da se smanji). */
+export const getImageSrcSet = (
+  imageStr: string | null | undefined,
+  widths: readonly number[] = IMAGE_WIDTHS,
+): string | undefined => {
+  const url = getImageUrl(imageStr);
+  if (getSizedImageUrl(url, widths[0]) === url) return undefined;
+  return widths.map((w) => `${getSizedImageUrl(url, w)} ${w}w`).join(", ");
+};
+
 // ============================================
 // HOOKS SA KEŠIRANJEM
 // ============================================
