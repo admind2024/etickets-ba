@@ -30,73 +30,32 @@ interface Ticket {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// HMAC SECRET - ISTI KAO NA BACKENDU
+// HMAC VERIFIKACIJA - POZIVA BACKEND (ključ je samo na serveru)
 // ═══════════════════════════════════════════════════════════════════════════
-const HMAC_SECRET = "ETK-9f38d1a2-cc49-4e3b-b182-7f94c2d9f6aa-2025";
-
-// ═══════════════════════════════════════════════════════════════════════════
-// HMAC FUNKCIJE
-// ═══════════════════════════════════════════════════════════════════════════
-
-let cachedCryptoKey: CryptoKey | null = null;
-
-async function getCryptoKey(): Promise<CryptoKey> {
-  if (cachedCryptoKey) return cachedCryptoKey;
-
-  const encoder = new TextEncoder();
-  const keyData = encoder.encode(HMAC_SECRET);
-
-  cachedCryptoKey = await crypto.subtle.importKey("raw", keyData, { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
-
-  console.log("🔐 HMAC ključ keširan");
-  return cachedCryptoKey;
-}
-
-async function hmacSha256(message: string): Promise<string> {
-  const encoder = new TextEncoder();
-  const messageData = encoder.encode(message);
-  const cryptoKey = await getCryptoKey();
-
-  const signature = await crypto.subtle.sign("HMAC", cryptoKey, messageData);
-  const hashArray = Array.from(new Uint8Array(signature));
-  const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
-
-  return hashHex.substring(0, 12);
-}
-
+// HMAC provjera ide preko servera (verify-qr) — ključ ne smije biti u kodu
+// koji se šalje pregledaču. Server prihvata karte potpisane i starim i novim ključem.
 async function verifyQRSignature(qrString: string): Promise<{
   valid: boolean;
   reason?: string;
   eventId?: string;
   ticketId?: string;
 }> {
-  console.log("🔐 Verifikujem QR:", qrString);
-
   if (!qrString) {
     return { valid: false, reason: "PRAZAN_QR" };
   }
-
-  const parts = qrString.split("|");
-
-  // Format: eventId|ticketId|signature
-  if (parts.length !== 3) {
-    console.log("❌ Neispravan format - dijelova:", parts.length);
-    return { valid: false, reason: "NEISPRAVAN_FORMAT" };
+  try {
+    const { data, error } = await supabase.functions.invoke("verify-qr", {
+      body: { qrCodeRaw: qrString },
+    });
+    if (error) {
+      console.error("❌ Greška pri verifikaciji:", error);
+      return { valid: false, reason: "SERVER_ERROR" };
+    }
+    return data;
+  } catch (err) {
+    console.error("❌ Network greška:", err);
+    return { valid: false, reason: "SERVER_ERROR" };
   }
-
-  const [eventId, ticketId, providedSignature] = parts;
-  const payload = `${eventId}|${ticketId}`;
-  const expectedSignature = await hmacSha256(payload);
-
-  console.log("🔐 Potpisi:", { provided: providedSignature, expected: expectedSignature });
-
-  if (providedSignature !== expectedSignature) {
-    console.log("❌ FALSIFIKAT - potpisi se ne podudaraju!");
-    return { valid: false, reason: "FALSIFIKAT", eventId, ticketId };
-  }
-
-  console.log("✅ HMAC verifikacija uspješna");
-  return { valid: true, eventId, ticketId };
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -686,11 +645,6 @@ export default function TicketDisplay() {
   const [errorModalOpen, setErrorModalOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [falsifikatModalOpen, setFalsifikatModalOpen] = useState(false);
-
-  // Pre-load HMAC key
-  useEffect(() => {
-    getCryptoKey();
-  }, []);
 
   // Fetch poster2 iz Sponzori tabele — samo ako sponsor.country === event.country
   useEffect(() => {
